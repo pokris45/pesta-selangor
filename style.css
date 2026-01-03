@@ -1,0 +1,306 @@
+/* style.css - Versi Folder Images & External CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+    background: #FFD700;
+    padding: 15px 0;
+    border-bottom: 5px solid #cc0000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    height: 95px;
+    width: auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #cc0000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.header-text { text-align: left; }
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #cc0000;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 600px;
+}
+
+/* --- NAVIGATION & DROPDOWN --- */
+nav {
+    background: #333;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li { position: relative; }
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    background: #cc0000;
+    color: #fff;
+}
+
+/* Dropdown CSS */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #cc0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- LAYOUT UTAMA --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: visible;
+    padding: 30px 0;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.col:hover { transform: translateY(-5px); }
+
+/* --- IMAGES & BUTTONS --- */
+.img-responsive {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.button {
+    display: inline-block;
+    background: #cc0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button:hover { background: #333; }
+
+/* --- HERO SECTION --- */
+#showcase {
+    /* PATH TELAH DIKEMASKINI DI SINI: images/skymirror2.png */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/skymirror2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#showcase h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 5px #000; }
+#showcase p { font-size: 1.4rem; text-shadow: 1px 1px 3px #000; }
+
+/* --- TABLE AJK --- */
+.ajk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.ajk-table thead tr { background-color: #cc0000; color: #ffffff; text-align: left; }
+.ajk-table th, .ajk-table td { padding: 12px 15px; border: 1px solid #ddd; }
+.ajk-table tbody tr:nth-of-type(even) { background-color: #f3f3f3; }
+.ajk-table tbody tr:hover { background-color: #fffbe6; }
+
+/* --- FORMS --- */
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; margin-bottom: 8px; font-weight: bold; }
+input[type="text"], input[type="email"], textarea {
+    width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;
+}
+.btn-group { display: flex; gap: 10px; }
+input[type="submit"], input[type="reset"] { padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; color: white; font-weight: bold;}
+input[type="submit"] { background-color: #cc0000; }
+input[type="reset"] { background-color: #555; }
+
+/* --- FOOTER --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+.social-links a { color: #FFD700; margin: 0 10px; text-decoration: none; font-weight: bold;}
+.social-links a:hover { color: #fff; text-decoration: underline; }
+
+/* --- FLIP CARD EXTERNAL CSS --- */
+.flip-card {
+    height: 420px;
+    width: 100%;
+    background-color: transparent;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: #333;
+    align-items: center;
+}
+
+.flip-card-back {
+    background-color: #cc0000;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.flip-card-back p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* --- RESPONSIVE --- */
+@media(max-width: 768px) {
+    header .container { flex-direction: column; text-align: center; }
+    nav ul { flex-direction: column; }
+    nav ul li { width: 100%; border-bottom: 1px solid #444; }
+    .dropdown-content { position: relative; width: 100%; }
+}
